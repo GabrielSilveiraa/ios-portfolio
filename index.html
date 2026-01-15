@@ -586,6 +586,29 @@
             box-shadow: var(--shadow-md);
         }
 
+        .project-card-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .project-icon-small {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            box-shadow: var(--shadow-md);
+            border: 2px solid var(--border-light);
+        }
+
+        .project-gif-small {
+            width: 180px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border: 3px solid var(--border-light);
+        }
+
         .project-card-icon {
             font-size: 3.5rem;
             flex-shrink: 0;
@@ -847,7 +870,17 @@
             
             .project-card-secondary {
                 flex-direction: column;
+                gap: 1.5rem;
+                align-items: center;
+            }
+            
+            .project-card-visual {
+                flex-direction: row;
                 gap: 1rem;
+            }
+            
+            .project-gif-small {
+                width: 140px;
             }
             
             .project-card-icon {
@@ -1118,7 +1151,10 @@
             <!-- TinyGoals - Secondary Project -->
             <div class="projects-secondary">
                 <div class="project-card-secondary">
-                    <div class="project-card-icon">✅</div>
+                    <div class="project-card-visual">
+                        <img src="tinygoals-icon.png" alt="TinyGoals app icon" class="project-icon-small">
+                        <img src="tinygoals-demo.gif" alt="TinyGoals habit tracking" class="project-gif-small">
+                    </div>
                     <div class="project-card-content">
                         <h3>TinyGoals</h3>
                         <p>A habit tracking app built with SwiftUI featuring widgets, Live Activities, and modern iOS capabilities. Helps users build consistent habits through visual tracking and smart reminders.</p>
