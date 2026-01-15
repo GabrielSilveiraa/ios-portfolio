@@ -503,6 +503,106 @@
             transform: translateY(-2px);
         }
 
+        /* New Pulse Featured Layout */
+        .project-featured-large {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+        }
+
+        .project-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem;
+            align-items: center;
+        }
+
+        .project-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-gif {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--border-light);
+        }
+
+        .project-details-large h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .project-details-large p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Secondary Projects */
+        .projects-secondary {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .project-card-secondary {
+            display: flex;
+            gap: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: var(--transition-normal);
+            align-items: flex-start;
+        }
+
+        .project-card-secondary:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .project-card-icon {
+            font-size: 3.5rem;
+            flex-shrink: 0;
+        }
+
+        .project-card-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-link-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-fast);
+            margin-top: 1rem;
+        }
+
+        .project-link-secondary:hover {
+            gap: 0.75rem;
+            color: var(--primary-dark);
+        }
+
         /* Life Grid */
         .life-grid {
             display: grid;
@@ -718,6 +818,26 @@
             
             .hero-highlights {
                 grid-template-columns: 1fr;
+            }
+            
+            .project-showcase {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            
+            .project-gif {
+                max-width: 250px;
+            }
+            
+            .project-card-secondary {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .project-card-icon {
+                font-size: 3rem;
+            }
             }
             
             .timeline {
@@ -940,36 +1060,64 @@
             <h2 class="section-title">Side Projects</h2>
             <p class="section-subtitle">Things I build when I'm not at work</p>
 
-            <div class="project-featured">
-                <div class="project-badge">Featured Project</div>
-                <h3>TinyGoals</h3>
-                <p>A habit tracking application built with SwiftUI that helps users build consistent habits through visual tracking and reminders. Features modern iOS capabilities including widgets, Live Activities, and seamless integration with the iOS ecosystem.</p>
-                <div class="project-features">
-                    <div class="feature">✅ Simple habit tracking</div>
-                    <div class="feature">📱 iOS Widgets support</div>
-                    <div class="feature">⚡ Live Activities</div>
-                    <div class="feature">🔔 Smart reminders</div>
-                    <div class="feature">📊 Progress visualization</div>
-                    <div class="feature">🎨 SwiftUI + @Observable</div>
+            <!-- Pulse - Featured Project -->
+            <div class="project-featured-large">
+                <div class="project-showcase">
+                    <div class="project-visual">
+                        <img src="pulse-demo.gif" alt="Pulse breathing animation" class="project-gif">
+                    </div>
+                    <div class="project-details-large">
+                        <div class="project-badge">✨ Featured Project</div>
+                        <h3>Pulse</h3>
+                        <p>A beautifully crafted breathing exercise app that helps users find calm and focus through guided breathwork. Features mesmerizing SwiftUI animations with layered circular gradients that expand and contract in sync with your breath, creating a truly immersive meditation experience.</p>
+                        <div class="project-features">
+                            <div class="feature">🫁 Guided breathing exercises</div>
+                            <div class="feature">✨ Stunning SwiftUI animations</div>
+                            <div class="feature">🎨 Beautiful gradient effects</div>
+                            <div class="feature">⏱️ Customizable session lengths</div>
+                            <div class="feature">🧘 Stress relief & focus</div>
+                            <div class="feature">🎯 Simple, intuitive interface</div>
+                        </div>
+                        <div class="tech-tags">
+                            <span>SwiftUI</span>
+                            <span>Core Animation</span>
+                            <span>Combine</span>
+                            <span>Custom Animations</span>
+                            <span>Haptics</span>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/pulse-breathing/id6757562482" class="project-link" target="_blank">
+                            <span>Download on App Store</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="tech-tags">
-                    <span>SwiftUI</span>
-                    <span>WidgetKit</span>
-                    <span>Live Activities</span>
-                    <span>Core Data</span>
-                    <span>Notifications</span>
-                </div>
-                <a href="https://apps.apple.com/br/app/tinygoals/id6757077123?l=en-GB" class="project-link" target="_blank">
-                    <span>View on App Store</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                </a>
             </div>
 
-            <p style="text-align: center; color: var(--text-secondary); font-style: italic; margin-top: 2rem;">
+            <!-- TinyGoals - Secondary Project -->
+            <div class="projects-secondary">
+                <div class="project-card-secondary">
+                    <div class="project-card-icon">✅</div>
+                    <div class="project-card-content">
+                        <h3>TinyGoals</h3>
+                        <p>A habit tracking app built with SwiftUI featuring widgets, Live Activities, and modern iOS capabilities. Helps users build consistent habits through visual tracking and smart reminders.</p>
+                        <div class="tech-tags">
+                            <span>SwiftUI</span>
+                            <span>WidgetKit</span>
+                            <span>Live Activities</span>
+                            <span>Core Data</span>
+                        </div>
+                        <a href="https://apps.apple.com/br/app/tinygoals/id6757077123?l=en-GB" class="project-link-secondary" target="_blank">
+                            View on App Store →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--text-secondary); font-style: italic; margin-top: 3rem;">
                 💡 Always working on new ideas and exploring the latest iOS technologies. Stay tuned for more projects!
             </p>
         </section>
@@ -1101,11 +1249,11 @@
                 </div>
 
                 <div class="contact-grid">
-                    <a href="mailto:gabi.msilveira@gmail.com" class="contact-card">
+                    <a href="/cdn-cgi/l/email-protection#325553505b1c5f415b5e44575b405372555f535b5e1c515d5f" class="contact-card">
                         <div class="contact-icon">📧</div>
                         <div class="contact-info">
                             <h3>Email</h3>
-                            <p>gabi.msilveira@gmail.com</p>
+                            <p><span class="__cf_email__" data-cfemail="84e3e5e6edaae9f7ede8f2e1edf6e5c4e3e9e5ede8aae7ebe9">[email&#160;protected]</span></p>
                         </div>
                     </a>
 
@@ -1142,7 +1290,7 @@
         </section>
     </main>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scroll navigation with active state
         const navLinks = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('section');
@@ -1174,13 +1322,4 @@
                 }
             });
             
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+            navLinks.forEach(li
