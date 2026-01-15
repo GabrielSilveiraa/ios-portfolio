@@ -523,13 +523,28 @@
         .project-visual {
             position: relative;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 2rem;
+        }
+
+        .project-icon-showcase {
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid var(--border-light);
         }
 
         .project-gif {
             width: 100%;
-            max-width: 300px;
+            max-width: 280px;
             border-radius: 24px;
             box-shadow: var(--shadow-lg);
             border: 4px solid var(--border-light);
@@ -1064,6 +1079,9 @@
             <div class="project-featured-large">
                 <div class="project-showcase">
                     <div class="project-visual">
+                        <div class="project-icon-showcase">
+                            <img src="pulse-icon.png" alt="Pulse app icon" class="project-icon-large">
+                        </div>
                         <img src="pulse-demo.gif" alt="Pulse breathing animation" class="project-gif">
                     </div>
                     <div class="project-details-large">
@@ -1249,11 +1267,11 @@
                 </div>
 
                 <div class="contact-grid">
-                    <a href="/cdn-cgi/l/email-protection#325553505b1c5f415b5e44575b405372555f535b5e1c515d5f" class="contact-card">
+                    <a href="mailto:gabi.msilveira@gmail.com" class="contact-card">
                         <div class="contact-icon">📧</div>
                         <div class="contact-info">
                             <h3>Email</h3>
-                            <p><span class="__cf_email__" data-cfemail="84e3e5e6edaae9f7ede8f2e1edf6e5c4e3e9e5ede8aae7ebe9">[email&#160;protected]</span></p>
+                            <p>gabi.msilveira@gmail.com</p>
                         </div>
                     </a>
 
